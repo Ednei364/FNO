@@ -4,7 +4,7 @@ var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var parcela = parseInt(numeroDeParc.value)
 var valor =parseInt(valorfinanc.value)
 var valorparc = valor /parcela
-var i = 1
+var i = 0
 
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
@@ -34,12 +34,12 @@ button.onclick=  function(){
     var contParcela = document.createTextNode(i);
     //var trAtual = document.getElementById("div1");
     trNova.appendChild(contParcela);    
-    document.body.insertBefore(trNova, trAtual);
+    //document.body.insertBefore(trNova, trAtual);
 
 
     $tr.appendChild(trNova)
-
-    return $fragment.appendChild($tr);
     i++
+    return $fragment.appendChild($tr);
+    
 
  }
