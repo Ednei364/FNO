@@ -8,7 +8,7 @@ var i = 0
 
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
-        criarpar()
+        //criarpar()
         criarpsar()
         
     }
@@ -28,6 +28,27 @@ button.onclick=  function(){
     i++
  }
  function criarpsar(){
+    return {
+        init: function(){
+          console.log('inicio init');// apenas para não me perder
+          this.companyInfo();// this neste caso esta referenciando ele mesmo. como se fosse "app.companyInfo()"
+          this.initEvents();
+        },
+  
+        initEvents: function initEvents(){
+          new DOM('[data-js="form-register"]').on('submit', this.handleSubmit);
+        },
+  
+        handleSubmit: function handleSubmit(e){
+          e.preventDefault();
+          console.log('submit');
+          var $tableCar = $('[data-js="fno"]').get();
+          $tableCar.appendChild(app.createNewCar());    
+        },
+
+
+
+    createNewCar: function createNewCar(){
     var $fragment = document.createDocumentFragment();
     var $tr = document.createElement('tr');
     var trNova = document.createElement("td");
@@ -40,6 +61,7 @@ button.onclick=  function(){
     $tr.appendChild(trNova)
     i++
     return $fragment.appendChild($tr);
-    
+}  
 
  }
+}
