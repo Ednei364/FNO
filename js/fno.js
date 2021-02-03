@@ -8,23 +8,32 @@ var i = 0
 
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
-        //criarpar()
-        criarpsar()
+        criarpar()
+      //  criarpsar()
         
     }
 }
  function criarpar(){
-  //  var $fragment = document.createDocumentFragment();
-   // var $tr = document.createElement('tr');
+    //var $fragment = document.createDocumentFragment();
+    var $tr = document.createElement('tr');
 
     var trNova = document.createElement("td");
+    var trNova1 = document.createElement("td");
+    var contParcela = document.createTextNode(i);
+    var contParcela = document.createTextNode(i);
     var contParcela = document.createTextNode(i);
     var trAtual = document.getElementById("div1");
-    trNova.appendChild(contParcela);    
-    document.body.insertBefore(trNova, trAtual);
+    
+    //document.body.insertBefore(trNova, trAtual);
+
+    trNova.appendChild(contParcela);
+    $tr.appendChild(trNova)
+    $tr.appendChild(trNova1)
 
 
-    //$tr.appendChild(trNova)
+    document.body.insertBefore($tr, trAtual);
+
+
     i++
  }
  function criarpsar(){
@@ -46,15 +55,13 @@ button.onclick=  function(){
           $tableCar.appendChild(app.createNewCar());    
         },
 
-
-
-    createNewCar: function createNewCar(){
-    var $fragment = document.createDocumentFragment();
-    var $tr = document.createElement('tr');
-    var trNova = document.createElement("td");
-    var contParcela = document.createTextNode(i);
+        createNewCar: function createNewCar(){
+        var $fragment = document.createDocumentFragment();
+        var $tr = document.createElement('tr');
+        var trNova = document.createElement("td");
+        var contParcela = document.createTextNode(i);
     //var trAtual = document.getElementById("div1");
-    trNova.appendChild(contParcela);    
+        trNova.appendChild(contParcela);    
     //document.body.insertBefore(trNova, trAtual);
 
 
