@@ -9,17 +9,36 @@ var i = 1
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
         criarpar()
+      //  criarpsar()
         
     }
 }
  function criarpar(){
+  //  var $fragment = document.createDocumentFragment();
+   // var $tr = document.createElement('tr');
 
-    var divNova = document.createElement("tr");
-    var conteudoNovo = document.createTextNode(i);
-    divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada
-  
-    // adiciona o novo elemento criado e seu conteúdo ao DOM
-    var divAtual = document.getElementById("div1");
-    document.body.insertBefore(divNova, divAtual);
+    var trNova = document.createElement("td");
+    var contParcela = document.createTextNode(i);
+    var trAtual = document.getElementById("div1");
+    trNova.appendChild(contParcela);    
+    document.body.insertBefore(trNova, trAtual);
+
+
+    //$tr.appendChild(trNova)
     i++
+ }
+ function criarpsar(){
+     var $fragment = document.createDocumentFragment();
+     var $tr = document.createElement('tr');
+
+    var trNova = document.createElement("td");
+    var contParcela = document.createTextNode(i);
+    var trAtual = document.getElementById("div1");
+    trNova.appendChild(contParcela);    
+    document.body.insertBefore(trNova, trAtual);
+
+
+    //$tr.appendChild(trNova)
+    i++
+
  }
