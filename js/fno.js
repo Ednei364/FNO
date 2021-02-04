@@ -5,7 +5,7 @@ var parcela = parseInt(numeroDeParc.value)
 var valor =parseInt(valorfinanc.value)
 var valorparc = valor /parcela
 var i = 0
-var $tr = document.querySelector('[data-js="tr"]')
+//var $tr = document.querySelector('[data-js="tr"]')
 
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
@@ -16,13 +16,13 @@ button.onclick=  function(){
 }
  function criarpar(){
     //var $fragment = document.createDocumentFragment();
-    //var $tr = document.createElement('tr');
+    var $tr = document.createElement('tr');
 
     var trNova = document.createElement("td"); //node
-    var contParcela = document.createTextNode(i*i);
+    var contParcela = document.createTextNode(`parcela ${i}`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`tr  ${i}`);
+    var contParcela1 = document.createTextNode(`parcela  ${parcela}`);
 
    // var contParcela = document.createTextNode(i+i+i+i);
     //var contParcela = document.createTextNode(i);
@@ -43,6 +43,7 @@ button.onclick=  function(){
 
 
     i++
+    //parcela--
  }
  function criarpsar(){
     return {
