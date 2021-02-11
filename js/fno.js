@@ -11,7 +11,7 @@ var i = 1
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
         criarpar()
-       criarpsar() 
+        criarpsar() 
         
     }
 }
