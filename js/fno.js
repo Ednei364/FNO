@@ -18,8 +18,9 @@ button.onclick=  function(){
 }
  function criarpar(){
     var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
-    var taxa1 =(parseInt(valorfinanc.value) * parseInt(taxa.value)/100)
     var saldo = (parseInt(valorfinanc.value)-(valorparc*i))
+    var taxa1 =(saldo * parseInt(taxa.value)/100)
+    
     //var $fragment = document.createDocumentFragment();
     var $tr = document.createElement('tr');
 
