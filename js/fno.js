@@ -23,7 +23,7 @@ button.onclick=  function(){
     var contParcela = document.createTextNode(`parcela ${i}`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`valor  ${parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)}`);
+    var contParcela1 = document.createTextNode(`valor  ${valorparc)}`);
 
     var trNova2 = document.createElement("td");//node
     var contParcela2 = document.createTextNode(`  valor  ${(parseInt(valorfinanc.value) * parseInt(numeroDeParc.value))}`);
