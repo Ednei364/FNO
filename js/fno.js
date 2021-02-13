@@ -19,7 +19,7 @@ button.onclick=  function(){
  function criarpar(){
     var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
     var taxa1 =(parseInt(valorfinanc.value) * parseInt(taxa.value)/100)
-    var saldo = 
+    var saldo = (parseInt(valorfinanc.value)-(valorparc*i))
     //var $fragment = document.createDocumentFragment();
     var $tr = document.createElement('tr');
 
@@ -45,10 +45,12 @@ button.onclick=  function(){
     trNova.appendChild(contParcela);
     trNova1.appendChild(contParcela1);
     trNova2.appendChild(contParcela2);
+    trNova3.appendChild(contParcela3);
 
     $tr.appendChild(trNova)
     $tr.appendChild(trNova1)
     $tr.appendChild(trNova2)
+    $tr.appendChild(trNova3)
 
 
     document.body.insertBefore($tr, trAtual);
