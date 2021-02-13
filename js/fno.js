@@ -4,30 +4,36 @@ var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
 var parcela = parseInt(numeroDeParc.value)
 var valor =parseInt(valorfinanc.value)
-var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
+//var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
 var i = 1
 //var $tr = document.querySelector('[data-js="tr"]')
 
 button.onclick=  function(){
     for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
+        
         criarpar()
         criarpsar() 
         
     }
 }
  function criarpar(){
+    var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
+    var taxa1 =(parseInt(valorfinanc.value) * parseInt(taxa.value)/100)
+    var saldo = 
     //var $fragment = document.createDocumentFragment();
     var $tr = document.createElement('tr');
 
     var trNova = document.createElement("td"); //node
-    var contParcela = document.createTextNode(`parcela ${i}`);
+    var contParcela = document.createTextNode(`Parc ${i}`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`valor  ${valorparc}`);
+    var contParcela1 = document.createTextNode(`Amortização  ${valorparc}`);
 
     var trNova2 = document.createElement("td");//node
-    var contParcela2 = document.createTextNode(`  valor  ${(parseInt(valorfinanc.value) * parseInt(numeroDeParc.value))}`);
-
+    var contParcela2 = document.createTextNode(`  Juros  ${taxa1}`);
+    
+    var trNova3 = document.createElement("td");//node
+    var contParcela3 = document.createTextNode(`  Saldo  ${saldo}`);
 
 
 
@@ -49,8 +55,8 @@ button.onclick=  function(){
 
 
     i++
-    valorfinanc--
-    //parcela--
+    //valorfinanc--
+
  }
  function criarpsar(){
   
