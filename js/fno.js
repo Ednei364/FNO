@@ -55,8 +55,7 @@ button.onclick=  function(){
 
 
     document.body.insertBefore($tr, trAtual);
-
-
+    
     i++
     //valorfinanc--
 
