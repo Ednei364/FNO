@@ -11,3 +11,25 @@ tr{
 td{
     border: 1.2px solid rgb(5, 5, 5);
 }
+h1{
+    background-color: rgb(128, 215, 223);
+    width: 400px;
+    position: relative;
+}
+div#fno{
+    background-color: rgb(103, 194, 123);
+    width: 400px;
+    position: relative
+}
+input{
+    background-color: rgb(228, 245, 242);
+    color: red;
+
+}
+label#erro{
+    background-color: rgb(233, 92, 92);
+    font-style: italic;
+    font-size: 20px;
+    /* margin-left: 100px; */
+    margin-right: 100px;
+}

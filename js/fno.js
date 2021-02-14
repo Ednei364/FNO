@@ -1,4 +1,5 @@
 var button = document.querySelector('[data-js="incluir"]')
+var erro = document.querySelector('[data-js="erro"]')
 var valorfinanc = document.querySelector('[data-js="valorfinanc"]')
 var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
@@ -6,16 +7,36 @@ var parcela = parseInt(numeroDeParc.value)
 var valor =parseInt(valorfinanc.value)
 //var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
 var i = 1
+var paras;
 //var $tr = document.querySelector('[data-js="tr"]')
 
 button.onclick=  function(){
-    for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
+    
+    if(isNaN(parseInt(valorfinanc.value))||parseInt(valorfinanc.value)<1 ){// ||parcela!=String|| taxa !=String){
+        erro.innerHTML="valor não informado"
+    }else if(isNaN(parseInt(numeroDeParc.value))||parseInt(numeroDeParc.value)<1){
+        erro.innerHTML="Parcela não informada"
+    }else if(isNaN(parseInt(taxa.value))||parseInt(taxa.value)<0.0000005) {
+        erro.innerHTML="Taxa não informada"
+    }else{
         
-        criarpar()
-        criarpsar() 
-        
+        if(paras>0){
+            console.log(`sss ${paras}`)
+            erro.innerHTML="Contrato já lançado, favor atualizar a página para nova simulação"
+            
+        }else{
+            for(var i=0; i < parseInt(numeroDeParc.value);i++ ){
+                erro.innerHTML=""
+                //   console.log(parseInt(i))
+                   criarpar()
+                   criarpsar() 
+               }
+        }
+        paras=1  
+    }     
     }
-}
+    
+
  function criarpar(){
     var valorparc = parseInt(valorfinanc.value) /parseInt(numeroDeParc.value)
     var saldo = (parseInt(valorfinanc.value)-(valorparc*i))

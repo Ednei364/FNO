@@ -51,5 +51,5 @@ console.log('me livrei da maldição')
 
 
 Excluirdiv.onclick= function excluir(){
-corpo.removeChild(corpo.childNodes[20])
+corpo.removeChild(corpo.childNodes[7])
 }
