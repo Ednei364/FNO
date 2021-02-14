@@ -46,16 +46,16 @@ button.onclick=  function(){
     var $tr = document.createElement('tr');
 
     var trNova = document.createElement("td"); //node
-    var contParcela = document.createTextNode(`Parc ${i}`);
+    var contParcela = document.createTextNode(`Parc. ${i}`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`Amortização  ${valorparc}`);
+    var contParcela1 = document.createTextNode(`Amort. R$  ${valorparc}`);
 
     var trNova2 = document.createElement("td");//node
-    var contParcela2 = document.createTextNode(`  Juros  ${taxa1}`);
+    var contParcela2 = document.createTextNode(`  Juros R$ ${taxa1}`);
     
     var trNova3 = document.createElement("td");//node
-    var contParcela3 = document.createTextNode(`  Saldo  ${saldo}`);
+    var contParcela3 = document.createTextNode(`  Saldo R$ ${saldo}`);
 
 
 

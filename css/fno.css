@@ -18,12 +18,13 @@ h1{
 }
 div#fno{
     background-color: rgb(103, 194, 123);
-    width: 400px;
+    width: 350px;
     position: relative
 }
 input{
     background-color: rgb(228, 245, 242);
     color: red;
+    margin-top: 5px;
 
 }
 label#erro{
@@ -32,4 +33,8 @@ label#erro{
     font-size: 20px;
     /* margin-left: 100px; */
     margin-right: 100px;
+}
+button#contrato{
+    margin-top: 20px;
+    margin-left: 150px;
 }
