@@ -3,9 +3,9 @@ var erro = document.querySelector('[data-js="erro"]')
 var valorfinanc = document.querySelector('[data-js="valorfinanc"]')
 var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
-var parcela = parseFloat(numeroDeParc.value)
+//var parcela = parseFloat(numeroDeParc.value)
 var valor =valorfinanc.value
-var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
+//var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
 var i = 1
 var paras;
 //var $tr = document.querySelector('[data-js="tr"]')
@@ -34,25 +34,25 @@ parcela.onkeyup=  function limiteFinanc(){
 
 //gerar contrato
 
-button.onclick=  function(){    
-    if(isNaN(parseFloat(valorfinanc.value))||parseFloat(valorfinanc.value)<1 ){// ||parcela!=String|| taxa !=String){
+button.onclick=  function(){   
+    var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value) 
+    var parcela = parseFloat(numeroDeParc.value)
+    var taxa1 = parseFloat(taxa.value)
+
+    if(isNaN(valorparc)||valorparc<1 ){
         erro.innerHTML="valor não informado"
-    }else if(isNaN(parseFloat(numeroDeParc.value))||parseFloat(numeroDeParc.value)<1){
+    }else if(isNaN(parcela)||parcela<1){
         erro.innerHTML="Parcela não informada"
-    }else if(isNaN(parseFloat(taxa.value))||parseFloat(taxa.value)<0.0000005) {
+    }else if(isNaN(taxa1)||taxa1<0.0000005) {
         erro.innerHTML="Taxa não informada"
-    }else{
-        
+    }else{        
         if(paras>0){
             console.log(`sss ${paras}`)
             erro.innerHTML="Contrato já lançado, favor atualizar a página para nova simulação"
-            
         }else{
             for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                 erro.innerHTML=""
-                //   console.log(parseFloat(i))
                    criarpar()
-                   
                }
             criarpsar() 
         }
