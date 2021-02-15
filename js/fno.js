@@ -19,20 +19,22 @@ valorfinanc.onkeyup =  function limiteFinanc(){
     valor = valor + '';
     if(valor == 'NaN') valorfinanc.value = '';
 }
-taxa.onkeyup=   function limiteFinanc(){
-    var valor = valorfinanc.value;
-    valor = valor + ''
-    valor= parseInt(valor.replace(/\D+/g, ''))
-    valor = valor + '';
-    if(valor == 'NaN') valorfinanc.value = '';
-}
 numeroDeParc.onkeyup=  function limiteFinanc(){
-    var valor = valorfinanc.value;
+    var valor = numeroDeParc.value;
     valor = valor + ''
     valor= parseInt(valor.replace(/\D+/g, ''))
     valor = valor + '';
-    if(valor == 'NaN') valorfinanc.value = '';
+    if(valor == 'NaN') numeroDeParc.value = '';
 }
+taxa.onkeyup=   function limiteFinanc(){
+
+    var valor = taxa.value;
+    valor = valor + ''
+    valor= parseInt(valor.replace(/\D+/g, ''))
+    valor = valor + '';
+    if(valor == 'NaN') taxa.value = '';
+}
+
 
 //gerar contrato
 
@@ -40,14 +42,15 @@ button.onclick=  function(){
     var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value) 
     var parcela = parseFloat(numeroDeParc.value)
     var taxa1 = parseFloat(taxa.value)
-
-    if(isNaN(valorparc)||valorparc<1 ){
-        erro.innerHTML="valor não informado"
-    }else if(isNaN(parcela)||parcela<1){
-        erro.innerHTML="Parcela não informada"
-    }else if(isNaN(taxa1)||taxa1<0.0000005) {
-        erro.innerHTML="Taxa não informada"
-    }else{        
+    if( numeroDeParc.value>120){
+        erro.innerHTML="Numero de parcelas acima do permitido"
+    }else if(isNaN(valorparc)||valorparc<1 ){
+            erro.innerHTML="valor não informado"
+        }else if(isNaN(parcela)||parcela<1){
+            erro.innerHTML="Parcela não informada"
+        }else if(isNaN(taxa1)||taxa1<0.0000005) {
+            erro.innerHTML="Taxa não informada"
+        }else{        
         if(paras>0){
             console.log(`sss ${paras}`)
             erro.innerHTML="Contrato já lançado, favor atualizar a página para nova simulação"
