@@ -32,7 +32,7 @@ parcela.onkeyup=  function limiteFinanc(){
     if(valor == 'NaN') valorfinanc.value = '';
 }
 
-
+//gerar contrato
 
 button.onclick=  function(){    
     if(isNaN(parseFloat(valorfinanc.value))||parseFloat(valorfinanc.value)<1 ){// ||parcela!=String|| taxa !=String){
