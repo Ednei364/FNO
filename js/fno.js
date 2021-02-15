@@ -3,6 +3,8 @@ var erro = document.querySelector('[data-js="erro"]')
 var valorfinanc = document.querySelector('[data-js="valorfinanc"]')
 var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
+var sdf = document.querySelector('[data-js="tr"]')
+
 //var parcela = parseFloat(numeroDeParc.value)
 var valor =valorfinanc.value
 //var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
@@ -71,19 +73,19 @@ button.onclick=  function(){
     var $tr = document.createElement('tr');
 
     var trNova = document.createElement("td"); //node
-    var contParcela = document.createTextNode(`${i}`);
+    var contParcela = document.createTextNode(`${i}ª`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`Amort. R$  ${Amort.toFixed(2)}`);
+    var contParcela1 = document.createTextNode(`R$  ${Amort.toFixed(2)}`);
 
     var trNova2 = document.createElement("td");//node
-    var contParcela2 = document.createTextNode(`  Juros R$ ${taxa1.toFixed(2)}`);
+    var contParcela2 = document.createTextNode(`R$ ${taxa1.toFixed(2)}`);
     
     var trNova3 = document.createElement("td");//node
-    var contParcela3 = document.createTextNode(`Parcela R$ ${parc.toFixed(2)}`);
+    var contParcela3 = document.createTextNode(`R$ ${parc.toFixed(2)}`);
     
     var trNova4 = document.createElement("td");//node
-    var contParcela4 = document.createTextNode(`  Saldo R$ ${saldo.toFixed(2)}`);
+    var contParcela4 = document.createTextNode(`R$ ${saldo.toFixed(2)}`);
 
 
 
@@ -105,7 +107,7 @@ button.onclick=  function(){
     $tr.appendChild(trNova4)
 
 
-    document.thead.insertBefore($tr, trAtual);
+    sdf.insertBefore($tr, trAtual);
     
     i++
     //valorfinanc--
