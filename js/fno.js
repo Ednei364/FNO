@@ -24,7 +24,7 @@ taxa.onkeyup=   function limiteFinanc(){
     valor = valor + '';
     if(valor == 'NaN') valorfinanc.value = '';
 }
-parcela.onkeyup=  function limiteFinanc(){
+numeroDeParc.onkeyup=  function limiteFinanc(){
     var valor = valorfinanc.value;
     valor = valor + ''
     valor= parseInt(valor.replace(/\D+/g, ''))
@@ -62,9 +62,10 @@ button.onclick=  function(){
     
 
  function criarpar(){
-    var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
-    var saldo = (parseFloat(valorfinanc.value)-(valorparc*i))
+    var Amort = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
+    var saldo = (parseFloat(valorfinanc.value)-(Amort*i))
     var taxa1 =(saldo * parseFloat(taxa.value)/100)
+    var parc =Amort+taxa1
     
     //var $fragment = document.createDocumentFragment();
     var $tr = document.createElement('tr');
@@ -73,13 +74,16 @@ button.onclick=  function(){
     var contParcela = document.createTextNode(`${i}`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`Amort. R$  ${valorparc.toFixed(2)}`);
+    var contParcela1 = document.createTextNode(`Amort. R$  ${Amort.toFixed(2)}`);
 
     var trNova2 = document.createElement("td");//node
     var contParcela2 = document.createTextNode(`  Juros R$ ${taxa1.toFixed(2)}`);
     
     var trNova3 = document.createElement("td");//node
-    var contParcela3 = document.createTextNode(`  Saldo R$ ${saldo.toFixed(2)}`);
+    var contParcela3 = document.createTextNode(`Parcela R$ ${parc.toFixed(2)}`);
+    
+    var trNova4 = document.createElement("td");//node
+    var contParcela4 = document.createTextNode(`  Saldo R$ ${saldo.toFixed(2)}`);
 
 
 
@@ -92,14 +96,16 @@ button.onclick=  function(){
     trNova1.appendChild(contParcela1);
     trNova2.appendChild(contParcela2);
     trNova3.appendChild(contParcela3);
+    trNova4.appendChild(contParcela4);
 
     $tr.appendChild(trNova)
     $tr.appendChild(trNova1)
     $tr.appendChild(trNova2)
     $tr.appendChild(trNova3)
+    $tr.appendChild(trNova4)
 
 
-    document.body.insertBefore($tr, trAtual);
+    document.thead.insertBefore($tr, trAtual);
     
     i++
     //valorfinanc--
