@@ -5,24 +5,31 @@ table{
     background-color:#3ab8ad93;
     /* border: 2px solid black; */
 }
+
 th{
-    border: 2px solid rgba(5, 5, 5, 0.705);
+    border-width:2px;
+    border-style: ridge;
+    border-color: black;
 }
-tr{
-    background-color:#3ab8ad93;
+
+tr#tt{
+    border-width:2px;
+    border-style: ridge;
+    border-color: black;
 }
+
 td{
-    border: 1.2px solid rgb(5, 5, 5);
+    border: 1px solid rgba(5, 5, 5, 0.705);
 }
+
 h1{
-    background-color: rgb(146, 214, 226);
+    background-color: rgb(90, 223, 246);
     width: 400px;
     position: relative;
 }
 div#fno{
-    background-color: rgb(103, 194, 123);
+    background-color: rgba(52, 243, 148, 0.801);
     width: 350px;
-    position: relative
 }
 input{
     background-color: rgb(228, 245, 242);
@@ -38,6 +45,11 @@ label#erro{
     margin-right: 100px;
 }
 button#contrato{
+    font-style: oblique;
+    font-family: serif;
+    font-size: 14pt;
+    background-color: darkgreen;
     margin-top: 20px;
-    margin-left: 150px;
+    margin: inherit;
+    margin-left: 230px;
 }
