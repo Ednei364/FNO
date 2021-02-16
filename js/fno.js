@@ -91,9 +91,12 @@ button.onclick=  function(){
     var taxa1 =(saldo * parseFloat(taxa.value)/100)
     var parc =Amort+taxa1
     var valor1 =function valor1(){
-        if(Amort>1){
+        if(Amort>999999.99){
             return /([0-9]{3})([0-9]{3}).([0-9]{2}$)/g
-        } 
+        }
+        if(Amort>999999.99){
+            return /([0-9]{3})([0-9]{3}).([0-9]{2}$)/g
+        }
     }   
     var tt = Amort.length
     var valor2=valor1()
@@ -110,7 +113,7 @@ button.onclick=  function(){
     var contParcela = document.createTextNode(`${i}ª`);
 
     var trNova1 = document.createElement("td");//node
-    var contParcela1 = document.createTextNode(`R$  ${Amort.toFixed(2).replace(valor2,'$1.$2,$3')}`);
+    var contParcela1 = document.createTextNode(`R$  ${Amort.toFixed(2).replace(valor2,'.$1.$2,$3')}`);
 
     var trNova2 = document.createElement("td");//node
     var contParcela2 = document.createTextNode(`R$ ${taxa1.toFixed(2)}`);
