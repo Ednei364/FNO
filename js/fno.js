@@ -95,11 +95,11 @@ button.onclick=  function(){
     var parcvalor3=',$1'
     var parcvalor1 =function valor1(){
         if(parc>999999.99){            
-            parc1valor3='.$1.$2,$3'
+            parcvalor3='.$1.$2,$3'
             return /([0-9]{3})([0-9]{3}).([0-9]{2}$)/g
         }
         if(parc>999.99){
-            parc1valor3='.$1,$2'
+            parcvalor3='.$1,$2'
             return /([0-9]{3}).([0-9]{2}$)/g
         }
         return /.([0-9]{2})$/g
@@ -140,7 +140,7 @@ button.onclick=  function(){
     var saldovalor3=',$1'
     var saldovalor1 =function valor1(){
         if(saldo>999999.99){            
-            saldo1valor3='.$1.$2,$3'
+            saldovalor3='.$1.$2,$3'
             return /([0-9]{3})([0-9]{3}).([0-9]{2}$)/g
         }
         if(saldo>999.99){
@@ -167,7 +167,7 @@ button.onclick=  function(){
     var contParcela2 = document.createTextNode(`${taxa1.toFixed(2).replace(taxa1valor2,taxa1valor3)}`);
     
     var trNova3 = document.createElement("td");//node
-    var contParcela3 = document.createTextNode(`aa${parc.toFixed(2).replace(parcvalor2,parcvalor3)}`);
+    var contParcela3 = document.createTextNode(`${parc.toFixed(2).replace(parcvalor2,parcvalor3)}`);
     
     var trNova4 = document.createElement("td");//node
     var contParcela4 = document.createTextNode(`${saldo.toFixed(2).replace(saldovalor2,saldovalor3)}`);
