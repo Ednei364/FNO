@@ -13,6 +13,7 @@ var paras;
 //var $tr = document.querySelector('[data-js="tr"]')
 // limite de caracteres
 valorfinanc.onkeyup =  function limiteFinanc(){
+    
     var valor = valorfinanc.value;
     valor = valor + ''
     valor= parseInt(valor.replace(/\D+/g, ''))
@@ -38,6 +39,7 @@ numeroDeParc.onkeyup=  function limiteFinanc(){
     valor= parseInt(valor.replace(/\D+/g, ''))
     valor = valor + '';
     if(valor == 'NaN') numeroDeParc.value = '';
+    numeroDeParc.value>420?erro.innerHTML="Numero de parcelas acima do permitido":erro.innerHTML=""
 }
 taxa.onkeyup=   function limiteFinanc(){
 
