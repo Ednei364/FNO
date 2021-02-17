@@ -4,6 +4,10 @@ var valorfinanc = document.querySelector('[data-js="valorfinanc"]')
 var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
 var sdf = document.querySelector('[data-js="tr"]')
+var newdata = document.querySelector('[data-js="newdata"]');
+
+noww= new Date
+newdata.value= "2021-02-01"
 
 //var parcela = parseFloat(numeroDeParc.value)
 var valor =valorfinanc.value
@@ -92,6 +96,49 @@ button.onclick=  function(){
     var saldo = fin-(Amort*i)
     var taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
     var parc =Amort+taxa1
+ ////////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////////
+ //var nnd =newdata.value
+
+ var nnd =newdata.value
+ var newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+ var diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+ var dia =newFrase[0]+newFrase[1]
+ var mes1 =diad
+ var ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+
+
+
+
+
+
+
+
+
+ 
+ if(mes1>12){
+     mes1=1
+     ano= parseInt(ano)+1
+ console.log(mes1)
+ }
+ var vv = ed()
+ function ed(){
+ if(mes1<10){
+ vv='0'+mes1
+ }else{ 
+ vv=mes1
+ }
+ var data1 = dia +'-'+ vv +'-' + ano
+
+ 
+
+ 
+  
+ 
+
+
+ ////////////////////////////////////////////////////////////////////////////////////////
 
     // Regex da juros//
     var parcvalor3=',$1'
@@ -174,6 +221,8 @@ button.onclick=  function(){
     var trNova4 = document.createElement("td");//node
     var contParcela4 = document.createTextNode(`${saldo.toFixed(2).replace(saldovalor2,saldovalor3)}`);
 
+    var trNova5 = document.createElement("td");//node
+    var contParcela5 = document.createTextNode(`${data1}`);
 
 
     var trAtual = document.getElementById("div1");
@@ -186,21 +235,25 @@ button.onclick=  function(){
     trNova2.appendChild(contParcela2);
     trNova3.appendChild(contParcela3);
     trNova4.appendChild(contParcela4);
+    trNova5.appendChild(contParcela5);
 
     $tr.appendChild(trNova)
     $tr.appendChild(trNova1)
     $tr.appendChild(trNova2)
     $tr.appendChild(trNova3)
     $tr.appendChild(trNova4)
+    $tr.appendChild(trNova5)
 
 
     sdf.insertBefore($tr, trAtual);
     
     i++
+    mes1++
     //valorfinanc--
 
  }
+}
  function criarpsar(){
     taxa.value =`${taxa.value}%`
 }
-  
+ 
