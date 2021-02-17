@@ -69,40 +69,36 @@ button.onclick=  function(){
    // var valorparc = fin1 /parseFloat(numeroDeParc.value) 
     var parcela = parseFloat(numeroDeParc.value)
     var taxa1 = parseFloat(taxa.value)
-    if( numeroDeParc.value>420){
+    if( numeroDeParc.value>420)
         erro.innerHTML="Numero de parcelas acima do permitido"
-    }else if(isNaN(fin1)||fin1<0.001 ){
-            erro.innerHTML="valor não informado"
-        }else if(isNaN(parcela)||parcela<1){
-            erro.innerHTML="Parcela não informada"
-        }else if(isNaN(taxa1)||taxa1<0.0000005) {
-            erro.innerHTML="Taxa não informada"
-        }else if(newdata.value==='') {
-            erro.innerHTML="Informe uma data"
-        }else{        
-        if(paras>0){
-            console.log(`sss ${paras}`)
-            //alert("Existre uma simulação de Fno já lançado, a pagina será recarregada")
-            window.location.reload()
-            
-        }else{
-            nnd =newdata.value
-            newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
-            diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
-            dia =newFrase[0]+newFrase[1]
-            mes1 =diad
-            ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
-            for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
+    if(!fin1)
+        return erro.innerHTML="valor não informado"
+    if(!parcela)
+        return erro.innerHTML="Parcela não informada"
+    if(!taxa1) 
+        return erro.innerHTML="Taxa não informada"
+    if(newdata.value==='') 
+        return erro.innerHTML="Informe uma data"
+    if(paras>0)
+        return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
+    nnd =newdata.value
+    newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+    diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+    dia =newFrase[0]+newFrase[1]
+    mes1 =diad
+    ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+    for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                 erro.innerHTML=""
                 console.log(newdata.value)
                 
                    criarpar()
-               }
+    }
             criarpsar() 
-        }
-        paras=1  
-    }     
+            paras=1
 }
+          
+         
+
     
 //newdata.onkeyup= function eds(){
 var nnd;// =newdata.value
