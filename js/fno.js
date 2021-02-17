@@ -5,6 +5,7 @@ var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
 var sdf = document.querySelector('[data-js="tr"]')
 var newdata = document.querySelector('[data-js="newdata"]');
+var ednei = document.querySelector('[data-js="ednei"]');
 
 noww= new Date
 newdata.value= "2021-02-01"
@@ -102,11 +103,11 @@ button.onclick=  function(){
  //var nnd =newdata.value
 
  var nnd =newdata.value
- var newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
- var diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
- var dia =newFrase[0]+newFrase[1]
+ ednei.value =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+ var diad = ednei.value[3]==='0'?ednei.value[4]:ednei.value[3]+ednei.value[4]
+ var dia =ednei.value[0]+ednei.value[1]
  var mes1 =diad
- var ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+ var ano=ednei.value[6]+ednei.value[7]+ednei.value[8]+ednei.value[9]
 
 
 
