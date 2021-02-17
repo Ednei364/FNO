@@ -77,6 +77,8 @@ button.onclick=  function(){
             erro.innerHTML="Parcela não informada"
         }else if(isNaN(taxa1)||taxa1<0.0000005) {
             erro.innerHTML="Taxa não informada"
+        }else if(newdata.value==='') {
+            erro.innerHTML="Informe uma data"
         }else{        
         if(paras>0){
             console.log(`sss ${paras}`)
@@ -84,6 +86,12 @@ button.onclick=  function(){
             window.location.reload()
             
         }else{
+            nnd =newdata.value
+            newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+            diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+            dia =newFrase[0]+newFrase[1]
+            mes1 =diad
+            ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
             for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                 erro.innerHTML=""
                 console.log(newdata.value)
@@ -97,12 +105,12 @@ button.onclick=  function(){
 }
     
 //newdata.onkeyup= function eds(){
-var nnd =newdata.value
-var newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
-var diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
-var dia =newFrase[0]+newFrase[1]
-var mes1 =diad
-var ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+var nnd;// =newdata.value
+var newFrase; //=nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+var diad;// = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+var dia;// =newFrase[0]+newFrase[1]
+var mes1;// =diad
+var ano;//=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
 //}
 
 function criarpar(){
