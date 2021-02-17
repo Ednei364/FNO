@@ -10,8 +10,14 @@ var newdata = document.querySelector('[data-js="newdata"]');
   
 
 //noww= new Date
-newdata.value= "2021-02-01"
-
+//
+newdata.value;
+newdata.onclick = function(){
+     newdata.value=newdata.value
+}
+// newdata.onkeyup = function newdata(){
+//     return newdata.value
+// }
 //var parcela = parseFloat(numeroDeParc.value)
 var valor =valorfinanc.value
 //var valorparc = parseFloat(valorfinanc.value) /parseFloat(numeroDeParc.value)
@@ -60,7 +66,7 @@ taxa.onkeyup=   function limiteFinanc(){
 
 button.onclick=  function(){  
     var fin1 = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.')) 
-    var valorparc = fin1 /parseFloat(numeroDeParc.value) 
+   // var valorparc = fin1 /parseFloat(numeroDeParc.value) 
     var parcela = parseFloat(numeroDeParc.value)
     var taxa1 = parseFloat(taxa.value)
     if( numeroDeParc.value>420){
@@ -80,6 +86,8 @@ button.onclick=  function(){
         }else{
             for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                 erro.innerHTML=""
+                console.log(newdata.value)
+                
                    criarpar()
                }
             criarpsar() 
@@ -88,13 +96,14 @@ button.onclick=  function(){
     }     
 }
     
-
+//newdata.onkeyup= function eds(){
 var nnd =newdata.value
 var newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
 var diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
 var dia =newFrase[0]+newFrase[1]
 var mes1 =diad
 var ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+//}
 
 function criarpar(){
     var fin = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.'))
