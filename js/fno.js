@@ -5,9 +5,11 @@ var numeroDeParc = document.querySelector('[data-js="totalparc"]')
 var taxa = document.querySelector('[data-js="taxa"]')
 var sdf = document.querySelector('[data-js="tr"]')
 var newdata = document.querySelector('[data-js="newdata"]');
-var ednei = document.querySelector('[data-js="ednei"]');
 
-noww= new Date
+
+  
+
+//noww= new Date
 newdata.value= "2021-02-01"
 
 //var parcela = parseFloat(numeroDeParc.value)
@@ -34,10 +36,8 @@ valorfinanc.onkeyup =  function limiteFinanc(){
 
     valorfinanc.value = valor;
     if(valor == 'NaN') valorfinanc.value = '';
-
-    
-
 }
+
 numeroDeParc.onkeyup=  function limiteFinanc(){
     var valor = numeroDeParc.value;
     valor = valor + ''
@@ -46,8 +46,8 @@ numeroDeParc.onkeyup=  function limiteFinanc(){
     if(valor == 'NaN') numeroDeParc.value = '';
     numeroDeParc.value>420?erro.innerHTML="Numero de parcelas acima do permitido":erro.innerHTML=""
 }
-taxa.onkeyup=   function limiteFinanc(){
 
+taxa.onkeyup=   function limiteFinanc(){
     var valor = taxa.value;
     valor = valor + ''
     valor= parseInt(valor.replace(/\D+/g, ''))
@@ -86,11 +86,17 @@ button.onclick=  function(){
         }
         paras=1  
     }     
-    }
+}
     
 
+var nnd =newdata.value
+var newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+var diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+var dia =newFrase[0]+newFrase[1]
+var mes1 =diad
+var ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
 
- function criarpar(){
+function criarpar(){
     var fin = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.'))
     //console.log(fin)
     var Amort = fin /parseFloat(numeroDeParc.value)
@@ -100,41 +106,24 @@ button.onclick=  function(){
  ////////////////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////////////
- //var nnd =newdata.value
+    if(mes1>12){
+        mes1=1
+        ano= parseInt(ano)+1
+    //console.log(mes1)
+    }
 
- var nnd =newdata.value
- ednei.value =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
- var diad = ednei.value[3]==='0'?ednei.value[4]:ednei.value[3]+ednei.value[4]
- var dia =ednei.value[0]+ednei.value[1]
- var mes1 =diad
- var ano=ednei.value[6]+ednei.value[7]+ednei.value[8]+ednei.value[9]
+    var vv = ed()
+    function ed(){
+    if(mes1<10){
+        vv='0'+mes1
+    }else{ 
+        vv=mes1
+}
+    var data1 = dia +'-'+ vv +'-' + ano
 
+ //console.log(mes1)
 
-
-
-
-
-
-
-
- 
- if(mes1>12){
-     mes1=1
-     ano= parseInt(ano)+1
- console.log(mes1)
- }
- var vv = ed()
- function ed(){
- if(mes1<10){
- vv='0'+mes1
- }else{ 
- vv=mes1
- }
- var data1 = dia +'-'+ vv +'-' + ano
-
- 
-
- 
+ //mes1=mes1 +1
   
  
 
@@ -152,8 +141,8 @@ button.onclick=  function(){
             parcvalor3='.$1,$2'
             return /([0-9]{3}).([0-9]{2}$)/g
         }
-        return /.([0-9]{2})$/g
-    }   
+            return /.([0-9]{2})$/g
+        }   
     var parcvalor2=parcvalor1()
 
     // Regex da amortização//
@@ -230,26 +219,26 @@ button.onclick=  function(){
    // var trAtual = document.getElementById("div21");
     
     //document.body.insertBefore(trNova, trAtual);
-
     trNova.appendChild(contParcela);
+    trNova5.appendChild(contParcela5);
     trNova1.appendChild(contParcela1);
     trNova2.appendChild(contParcela2);
     trNova3.appendChild(contParcela3);
     trNova4.appendChild(contParcela4);
-    trNova5.appendChild(contParcela5);
-
+    
     $tr.appendChild(trNova)
+    $tr.appendChild(trNova5)
     $tr.appendChild(trNova1)
     $tr.appendChild(trNova2)
     $tr.appendChild(trNova3)
     $tr.appendChild(trNova4)
-    $tr.appendChild(trNova5)
 
 
     sdf.insertBefore($tr, trAtual);
     
     i++
     mes1++
+    console.log(mes1)
     //valorfinanc--
 
  }
