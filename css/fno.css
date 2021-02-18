@@ -56,9 +56,7 @@ button#contrato{
 
 
 
-
-
-
+/* formatação dos botões */
 .bt {
     border:1px solid #25692A;
     border-radius:4px;
@@ -98,4 +96,5 @@ button#contrato{
     .bt:active {
     position:relative;
     top:2px;}
+    /* formatação dos botões FIM*/
      
