@@ -6,6 +6,9 @@ table{
     width: 509px;
     /* border: 2px solid black; */
 }
+thead{
+    width: 509px;
+}
 
 tr{
     border-width:2px;
