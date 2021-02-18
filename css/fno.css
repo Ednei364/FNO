@@ -10,10 +10,10 @@ th{
     border-width:2px;
     border-style: ridge;
     border-color: black;
-    width: 95px;
+    width: 85px;
 }
 th#par{
-    width: 7px;
+    width:1px;
 }
 
 td{
