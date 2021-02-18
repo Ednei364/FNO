@@ -35,10 +35,11 @@ valorfinanc.onkeyup =  function limiteFinanc(){
     valor = valor + '';
     valor = valor.replace(/([0-9]{2})$/g, ",$1");
     
-    if (valor.length > 9) 
-       return valor = valor.replace(/([0-9]{3})([0-9]{3}),([0-9]{2}$)/g, ".$1.$2,$3 ");
-    if (valor.length > 6)
-       return valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    if (valor.length > 9){
+        valor = valor.replace(/([0-9]{3})([0-9]{3}),([0-9]{2}$)/g, ".$1.$2,$3 ");
+    }else if (valor.length > 6){
+        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    }
     valorfinanc.value = valor;
     if(valor == 'NaN') valorfinanc.value = '';
 }
