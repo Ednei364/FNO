@@ -6,12 +6,20 @@ table{
     /* border: 2px solid black; */
 }
 
+tr{
+    border-width:2px;
+    border-style: ridge;
+    border-color: black;
+    width: 85px;
+}
+
 th{
     border-width:2px;
     border-style: ridge;
     border-color: black;
     width: 85px;
 }
+
 th#par{
     width:1px;
 }
