@@ -41,6 +41,10 @@ h1{
 div#fno{
     background-color: rgba(52, 243, 148, 0.801);
     width: 700px;
+    margin-top: 10px;
+    padding-top: 50pt;
+    padding-left: 50pt;
+    padding-bottom: 50pt;
 }
 input{
     background-color: rgb(228, 245, 242);
