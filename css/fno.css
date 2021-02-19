@@ -3,11 +3,11 @@ body{
 }
 table{
     background-color:#3ab8ad93;
-    width: 509px;
+    width: 700px;
     /* border: 2px solid black; */
 }
 thead{
-    width: 509px;
+    width: 700px;
     
 }
 
@@ -35,12 +35,12 @@ td{
 
 h1{
     background-color: rgb(90, 223, 246);
-    width: 509px;
+    width: 700px;
     position: relative;
 }
 div#fno{
     background-color: rgba(52, 243, 148, 0.801);
-    width: 509px;
+    width: 700px;
 }
 input{
     background-color: rgb(228, 245, 242);
