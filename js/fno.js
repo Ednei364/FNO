@@ -1,5 +1,6 @@
 (function(){
         'use strict'
+        
     var button = document.querySelector('[data-js="incluir"]')
     var erro = document.querySelector('[data-js="erro"]')
     var valorfinanc = document.querySelector('[data-js="valorfinanc"]')
@@ -66,6 +67,7 @@
 
     //gerar contrato
     button.addEventListener('click', function(e){
+        console.time('fim da console')
         var fin1 = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.')) 
         var parcela = parseFloat(numeroDeParc.value)
         var taxa1 = parseFloat(taxa.value)
@@ -258,6 +260,7 @@
 
     function criarpsar(){
         taxa.value =`${taxa.value}%`
+        console.timeEnd('fim da console')
     }
-    console.timeEnd('fim da console')
+    
 })()
