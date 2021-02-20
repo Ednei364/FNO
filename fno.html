@@ -27,9 +27,9 @@
     </div>
     
     <div id="fno">
-        Valor do contrato   <input type="text" id="valor" data-js="valorfinanc"maxlength="15" value=""></br>
-        Quant.de parcelas   <input type="text" id="parc" data-js="totalparc" maxlength="3" value=""></br>
-        Taxa do contrato     <input type="text" id="taxa" data-js="taxa" maxlength="3"  value=""></br>
+        Valor do contrato   <input type="text" id="valor" data-js="valorfinanc"maxlength="15" value="1"></br>
+        Quant.de parcelas   <input type="text" id="parc" data-js="totalparc" maxlength="3" value="2"></br>
+        Taxa do contrato     <input type="text" id="taxa" data-js="taxa" maxlength="3"  value="2"></br>
         Data da primeira parcela   <input type="date" id="date" data-js="newdata" value="2020-02-18"></br>
         
         <label data-js="asdf" ></label> 
@@ -44,8 +44,10 @@
     <table >
 		<thead data-js="tr" >
 			<tr id="tt" >
-				<th id="par">Parc.</th>
-                <th>Data </th>
+				<th>dias</th>
+				<th>taxa</th>
+                <th>Venc </th>
+				<th>Parc.</th>
 				<th>Amortiz.</th>
 				<th>Juros</th>
 				<th>Prestação</th>

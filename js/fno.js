@@ -81,8 +81,8 @@
             return erro.innerHTML="Taxa não informada"
         if(newdata.value==='') 
             return erro.innerHTML="Informe uma data"
-        if(paras>0)
-            return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
+        //if(paras>0)
+           // return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
 
         nnd =newdata.value
         newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
@@ -97,8 +97,11 @@
                     $tr = document.createElement('tr');
                     sdf.insertBefore($tr, trAtual);
                     
-                    parcelacal()
+                    diascal()
+                    taxmescal()
+
                     datacal()
+                    parcelacal()
                     amortcal()
                     taxacal()
                     prestcal()                
@@ -108,6 +111,22 @@
                 paras=1
     },false)        
             
+
+    function diascal(){
+
+    }
+
+
+
+    function taxmescal(){
+
+    }
+
+
+
+
+
+
 
     function parcelacal(){
         var trNova = document.createElement("td"); //node
@@ -133,10 +152,14 @@
         var data1 = dia +'-'+ vv +'-' + ano
         var trNova5 = document.createElement("td");//node
         var contParcela5 = document.createTextNode(`${data1}`);
+
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
 
         mes1++
+        var dyas= data1.replace(/\-/g,'') 
+        var dyas2 
+        console.log(dyas)
     }
 
     function amortcal(){
