@@ -259,5 +259,5 @@
     function criarpsar(){
         taxa.value =`${taxa.value}%`
     }
-    
+    console.timeEnd('fim da console')
 })()
