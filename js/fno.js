@@ -15,6 +15,9 @@
     var i = 1
     var paras;
     var $tr = document.createElement('tr');
+    var dyas= newdata.value.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1').replace(/\-/g,'');
+    var dyas2;
+    var taxamem;
     var nnd;
     var newFrase; 
     var diad;
@@ -113,13 +116,27 @@
             
 
     function diascal(){
+        taxamem = (1+taxa.value)^(20/valorfinanc.value)-1
+
+        var taxaDoMes = document.createElement("td");//node
+        var noTaxaDoMes = document.createTextNode(`${taxamem}`);
+
+        taxaDoMes.appendChild(noTaxaDoMes)
+        $tr.appendChild(taxaDoMes)
 
     }
 
 
 
     function taxmescal(){
+        taxamem = ((1+(taxa.value/100))^(31/valorfinanc.value))-1
 
+        var taxaDoMes = document.createElement("td");//node
+        var noTaxaDoMes = document.createTextNode(`${taxamem}`);
+
+        taxaDoMes.appendChild(noTaxaDoMes)
+        $tr.appendChild(taxaDoMes)
+        
     }
 
 
@@ -157,9 +174,12 @@
         $tr.appendChild(trNova5)
 
         mes1++
-        var dyas= data1.replace(/\-/g,'') 
-        var dyas2 
+        i%2===0?dyas= data1.replace(/\-/g,''):dyas2= data1.replace(/\-/g,'')
+        //dyas= data1.replace(/\-/g,'') 
+        var res = dyas2 - dyas
         console.log(dyas)
+        console.log(dyas2)
+        console.log(res)
     }
 
     function amortcal(){
