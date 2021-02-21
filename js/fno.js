@@ -15,20 +15,25 @@
     var i = 1
     var paras;
     var $tr = document.createElement('tr');
-    var dyas= newdata.value.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1').replace(/\-/g,'');
+    var dyas;
+    var dataPag = newdata.value
+    var NovaData = new Date(dataPag)
     var dyas2;
+    console.log(NovaData)
     var taxamem;
-    var nnd;
-    var newFrase; 
-    var diad;
-    var dia;
-    var mes1;
-    var ano;
+    //var nnd;
+    //var newFrase; 
+    //var diad;
+    //var dia;
+    //var mes1;
+   // var ano;
     var fin;
     var Amort;
     var saldo;
     var parc;
     var taxa1
+    
+   // var NovaData = new Date(dataPag)
     /////////////////////////////////////////////////////   
 
     newdata.onclick = function(){
@@ -87,12 +92,12 @@
         //if(paras>0)
            // return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
 
-        nnd =newdata.value
-        newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
-        diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
-        dia =newFrase[0]+newFrase[1]
-        mes1 =diad
-        ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
+       // nnd =newdata.value
+       // newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
+       // diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
+       // dia =newFrase[0]+newFrase[1]
+        //mes1 =diad
+       // ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
 
         for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                     erro.innerHTML=""
@@ -153,33 +158,44 @@
     }
 
     function datacal(){
-        if(mes1>12){
-            mes1=1
-            ano= parseInt(ano)+1
+        function cal(n){
+            return n<=9?`0${n}`:`${n}`;
         }
-    
-        var vv = ed()
-        function ed(){
-        if(mes1<10)
-        return vv='0'+mes1
-        if(mes1>0)
-        return vv=mes1
-    }
 
-        var data1 = dia +'-'+ vv +'-' + ano
+        function formatarDate(date){       
+            var d = cal(date.getDate())
+            var m= cal(date.getMonth())
+            var a= cal(date.getFullYear())
+            return `${d}-${m}-${a}`
+        }
+        NovaData.setMonth(NovaData.getMonth()+i-1)
+        
+        var dataLocal=formatarDate(NovaData)
         var trNova5 = document.createElement("td");//node
-        var contParcela5 = document.createTextNode(`${data1}`);
+        var contParcela5 = document.createTextNode(`${dataLocal}`);
+        dyas= newdata.value
 
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
+        console.log(i)
 
-        mes1++
-        i%2===0?dyas= data1.replace(/\-/g,''):dyas2= data1.replace(/\-/g,'')
-        //dyas= data1.replace(/\-/g,'') 
-        var res = dyas2 - dyas
-        console.log(dyas)
-        console.log(dyas2)
-        console.log(res)
+         if(i===1) {
+             NovaData.setMonth(NovaData.getMonth()+i-1)
+             dyas2=formatarDate(NovaData)
+         }
+         console.log(i)
+
+console.log(`dyas 2 ${dyas2}`)
+
+        i%2===0?dyas=dataLocal:dyas2=dataLocal
+        //dyas= newdata.value
+        console.log(i)
+
+console.log(`dyas 2 ${dyas2}`)
+
+        console.log(i)
+console.log(`dyas 1 ${dyas}`)
+console.log(`dyas 2 ${dyas2}`)
     }
 
     function amortcal(){
