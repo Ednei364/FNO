@@ -19,7 +19,6 @@
     var dataPag = newdata.value
     var NovaData = new Date(dataPag)
     var dyas2;
-    console.log(NovaData)
     var taxamem;
     //var nnd;
     //var newFrase; 
@@ -75,7 +74,7 @@
 
     //gerar contrato
     button.addEventListener('click', function(e){
-        console.time('fim da console')
+
         var fin1 = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.')) 
         var parcela = parseFloat(numeroDeParc.value)
         var taxa1 = parseFloat(taxa.value)
@@ -168,7 +167,7 @@
             var a= cal(date.getFullYear())
             return `${d}-${m}-${a}`
         }
-        NovaData.setMonth(NovaData.getMonth()+i-1)
+        NovaData.setMonth(NovaData.getMonth()+i)
         
         var dataLocal=formatarDate(NovaData)
         var trNova5 = document.createElement("td");//node
@@ -177,25 +176,27 @@
 
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
-        console.log(i)
 
-         if(i===1) {
-             NovaData.setMonth(NovaData.getMonth()+i-1)
-             dyas2=formatarDate(NovaData)
-         }
-         console.log(i)
+        //  if(i===1) {
+        //      NovaData.setMonth(NovaData.getMonth()+i)
+        //      dyas2=formatarDate(NovaData)
+        //  }
 
-console.log(`dyas 2 ${dyas2}`)
 
-        i%2===0?dyas=dataLocal:dyas2=dataLocal
+        if(i%2===0 ){//&& i>1){
+            dyas=dataLocal
+            console.log(`dyas ${i} ${dyas}`)
+
+        }else{
+            dyas2="dataLocal"
+            console.log(`dyas ${i} ${dyas2}`)
+
+            }
         //dyas= newdata.value
-        console.log(i)
 
-console.log(`dyas 2 ${dyas2}`)
 
-        console.log(i)
-console.log(`dyas 1 ${dyas}`)
-console.log(`dyas 2 ${dyas2}`)
+// console.log(`dyas 1 ${dyas}`)
+//console.log(`dyas 2 ${dyas2}`)
     }
 
     function amortcal(){
@@ -319,7 +320,7 @@ console.log(`dyas 2 ${dyas2}`)
 
     function criarpsar(){
         taxa.value =`${taxa.value}%`
-        console.timeEnd('fim da console')
+
     }
     
 })()
