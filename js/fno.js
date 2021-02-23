@@ -31,7 +31,6 @@
     var saldo;
     var parc;
     var taxa1
-    console.log(dyas)
     
    // var NovaData = new Date(dataPag)
     /////////////////////////////////////////////////////   
@@ -107,7 +106,6 @@
                     
                     diascal()
                    // taxmescal()
-
                     datacal()
                     parcelacal()
                     amortcal()
@@ -117,15 +115,13 @@
         }
                 criarpsar() 
                 paras=1
-    console.log(dyas)
+
 
     },false)        
             
 
     function diascal(){
         dyas>dyas2?taxamem=dyas-dyas2:taxamem=dyas2-dyas2
-        //taxamem = (1+taxa.value)^(20/valorfinanc.value)-1
-        console.log(taxamem)
         var taxaDoMes = document.createElement("td");//node
         var noTaxaDoMes = document.createTextNode(`${taxamem}`);
 
@@ -146,12 +142,6 @@
         $tr.appendChild(taxaDoMes)
         
     }
-
-
-
-
-
-
 
     function parcelacal(){
         var trNova = document.createElement("td"); //node
@@ -190,11 +180,11 @@
 
         if(i%2===0 ){//&& i>1){
             dyas=dataLocal
-            console.log(`1dyas ${i} ${dyas}`)
+           // console.log(`1dyas ${i} ${dyas}`)
 
         }else{
             dyas2=dataLocal
-            console.log(`2dyas ${i} ${dyas2}`)
+           // console.log(`2dyas ${i} ${dyas2}`)
 
             }
         //dyas= newdata.value
