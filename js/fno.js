@@ -156,12 +156,6 @@
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
 
-        //  if(i===1) {
-        //      NovaData.setMonth(NovaData.getMonth()+i)
-        //      dyas2=formatarDate(NovaData)
-        //  }
-
-
 
         if(i%2===0 ){//&& i>1){
             dyas=dd
@@ -265,8 +259,6 @@
     }
 
     function saldocal(){
-        ////////////////////////////////////////////////////////////////////////////////////////
-        // Regex da Saldo//
         var saldovalor3=',$1'
         var saldovalor1 =function valor1(){
             if(saldo>999999.99){            
@@ -279,18 +271,11 @@
             }
             return /.([0-9]{2})$/g
         }   
-        var saldovalor2=saldovalor1()
-        
-
-    
+        var saldovalor2=saldovalor1()  
         var trNova4 = document.createElement("td");//node
         var contParcela4 = document.createTextNode(`${saldo.toFixed(2).replace(saldovalor2,saldovalor3)}`);
-
-        var trAtual = document.getElementById("div1");
-    
+        //var trAtual = document.getElementById("div1");
         trNova4.appendChild(contParcela4);
-        
-
         $tr.appendChild(trNova4)
 
 
@@ -300,7 +285,6 @@
 
     function criarpsar(){
         taxa.value =`${taxa.value}%`
-
     }
     
 })()
