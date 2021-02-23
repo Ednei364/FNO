@@ -138,7 +138,6 @@
         function cal(n){
             return n<=9?`0${n}`:`${n}`;
         }
-
         function formatarDate(date){       
             var d = cal(date.getDate())
             var m= cal(date.getMonth())
