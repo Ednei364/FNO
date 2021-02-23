@@ -15,10 +15,9 @@
     var i = 1
     var paras;
     var $tr = document.createElement('tr');
-    var dyas=0
+    var dyas;
     var dataPag = newdata.value
     var NovaData = new Date(dataPag)
-    var NovaData1 =new Date(dataPag)
     var dyas2;
     var taxamem;
     //var nnd;
@@ -168,7 +167,7 @@
         var dataLocal=formatarDate(NovaData)
         var trNova5 = document.createElement("td");//node
         var contParcela5 = document.createTextNode(`${dataLocal}`);
-        dyas= newdata.value
+        //dyas= newdata.value
 
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
