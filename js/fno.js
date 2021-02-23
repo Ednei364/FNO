@@ -99,8 +99,6 @@
         }
                 criarpsar() 
                 paras=1
-
-
     },false)        
             
 
@@ -114,14 +112,10 @@
 
     }
 
-
-
     function taxmescal(){
         taxamem = ((1+(taxa.value/100))^(31/valorfinanc.value))-1
-
         var taxaDoMes = document.createElement("td");//node
         var noTaxaDoMes = document.createTextNode(`${taxamem}`);
-
         taxaDoMes.appendChild(noTaxaDoMes)
         $tr.appendChild(taxaDoMes)
         
