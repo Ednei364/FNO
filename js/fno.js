@@ -20,19 +20,11 @@
     var NovaData = new Date(dataPag)
     var dyas2;
     var taxamem;
-    //var nnd;
-    //var newFrase; 
-    //var diad;
-    //var dia;
-    //var mes1;
-   // var ano;
     var fin;
     var Amort;
     var saldo;
     var parc;
     var taxa1
-    
-   // var NovaData = new Date(dataPag)
     /////////////////////////////////////////////////////   
 
     newdata.onclick = function(){
@@ -90,14 +82,6 @@
             return erro.innerHTML="Informe uma data"
         //if(paras>0)
            // return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
-
-       // nnd =newdata.value
-       // newFrase =nnd.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$3-$2-$1')
-       // diad = newFrase[3]==='0'?newFrase[4]:newFrase[3]+newFrase[4]
-       // dia =newFrase[0]+newFrase[1]
-        //mes1 =diad
-       // ano=newFrase[6]+newFrase[7]+newFrase[8]+newFrase[9]
-
         for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                     erro.innerHTML=""
                     var trAtual = document.getElementById("div1");
