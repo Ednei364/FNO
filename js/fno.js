@@ -182,6 +182,7 @@
         //      dyas2=formatarDate(NovaData)
         //  }
 
+        
 
         if(i%2===0 ){//&& i>1){
             dyas=dataLocal
