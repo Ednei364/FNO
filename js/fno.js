@@ -145,32 +145,17 @@
             var a= cal(date.getFullYear())
             return `${d}-${m}-${a}`
         }
-        //NovaData.setMonth(NovaData.getMonth()+1)
         var dd = NovaData.setMonth(NovaData.getMonth()+1)
-        
         var dataLocal=formatarDate(NovaData)
         var trNova5 = document.createElement("td");//node
         var contParcela5 = document.createTextNode(`${dataLocal}`);
-        //dyas= newdata.value
-
         trNova5.appendChild(contParcela5)
         $tr.appendChild(trNova5)
-
-
-        if(i%2===0 ){//&& i>1){
+        if(i%2===0 ){
             dyas=dd
-            console.log(`1dyas ${i} ${dyas}`)
-
         }else{
             dyas2=dd
-            console.log(`2dyas ${i} ${dyas2}`)
-
             }
-        //dyas= newdata.value
-
-
-// console.log(`dyas 1 ${dyas}`)
-//console.log(`dyas 2 ${dyas2}`)
     }
 
     function amortcal(){
@@ -179,7 +164,6 @@
         saldo = fin-(Amort*i)
         taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
         parc =Amort+taxa1
-
         var Amortvalor3=',$1'
         var Amortvalor1 =function valor1(){
             if(Amort>999999.99){            
@@ -197,7 +181,6 @@
         var contParcela1 = document.createTextNode(`${Amort.toFixed(2).replace(Amortvalor2,Amortvalor3)}`);
         trNova1.appendChild(contParcela1);
         $tr.appendChild(trNova1)
-        
     }
 
     function taxacal(){
@@ -206,8 +189,6 @@
         saldo = fin-(Amort*i)
         taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
         parc =Amort+taxa1
-
-
         var taxa1valor3=',$1'
         var taxa1valor1 =function valor1(){
             if(taxa1>999999.99){            
@@ -221,8 +202,6 @@
             return /.([0-9]{2})$/g
         }   
         var taxa1valor2=taxa1valor1()
-
-
         var trNova2 = document.createElement("td");//node
         var contParcela2 = document.createTextNode(`${taxa1.toFixed(2).replace(taxa1valor2,taxa1valor3)}`);
         trNova2.appendChild(contParcela2);
@@ -230,13 +209,11 @@
     }
 
     function prestcal(){
-
         fin = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.'))
         Amort = fin /parseFloat(numeroDeParc.value)
         saldo = fin-(Amort*i)
         taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
         parc =Amort+taxa1
-
         var parcvalor3=',$1'
         var parcvalor1 =function valor1(){
             if(parc>999999.99){            
@@ -250,8 +227,6 @@
                 return /.([0-9]{2})$/g
             }   
         var parcvalor2=parcvalor1()
-
-
         var trNova3 = document.createElement("td");//node
         var contParcela3 = document.createTextNode(`${parc.toFixed(2).replace(parcvalor2,parcvalor3)}`);
         trNova3.appendChild(contParcela3);
@@ -274,13 +249,9 @@
         var saldovalor2=saldovalor1()  
         var trNova4 = document.createElement("td");//node
         var contParcela4 = document.createTextNode(`${saldo.toFixed(2).replace(saldovalor2,saldovalor3)}`);
-        //var trAtual = document.getElementById("div1");
         trNova4.appendChild(contParcela4);
         $tr.appendChild(trNova4)
-
-
         i++
-
     }
 
     function criarpsar(){
