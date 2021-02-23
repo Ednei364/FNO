@@ -15,9 +15,10 @@
     var i = 1
     var paras;
     var $tr = document.createElement('tr');
-    var dyas;
+    var dyas=0
     var dataPag = newdata.value
     var NovaData = new Date(dataPag)
+    var NovaData1 =new Date(dataPag)
     var dyas2;
     var taxamem;
     //var nnd;
@@ -121,7 +122,7 @@
             
 
     function diascal(){
-        dyas>dyas2?taxamem=dyas-dyas2:taxamem=dyas2-dyas2
+        dyas>dyas2?taxamem=(dyas-dyas2)/1000/60/60/24:taxamem=(dyas2-dyas)/1000/60/60/24
         var taxaDoMes = document.createElement("td");//node
         var noTaxaDoMes = document.createTextNode(`${taxamem}`);
 
@@ -161,7 +162,8 @@
             var a= cal(date.getFullYear())
             return `${d}-${m}-${a}`
         }
-        NovaData.setMonth(NovaData.getMonth()+1)
+        //NovaData.setMonth(NovaData.getMonth()+1)
+        var dd = NovaData.setMonth(NovaData.getMonth()+1)
         
         var dataLocal=formatarDate(NovaData)
         var trNova5 = document.createElement("td");//node
@@ -179,12 +181,12 @@
 
 
         if(i%2===0 ){//&& i>1){
-            dyas=dataLocal
-           // console.log(`1dyas ${i} ${dyas}`)
+            dyas=dd
+            console.log(`1dyas ${i} ${dyas}`)
 
         }else{
-            dyas2=dataLocal
-           // console.log(`2dyas ${i} ${dyas2}`)
+            dyas2=dd
+            console.log(`2dyas ${i} ${dyas2}`)
 
             }
         //dyas= newdata.value
