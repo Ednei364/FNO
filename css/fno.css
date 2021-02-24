@@ -3,19 +3,27 @@ body{
 }
 table{
     background-color:#3ab8ad93;
-    width: 700px;
+    width: auto;
+    position: relative;
+    padding: auto;
+    margin: auto;
     /* border: 2px solid black; */
 }
 thead{
-    width: 700px;
-    
+    width: auto;
+    position: relative;
+    padding: auto;
+    margin: auto;
 }
 
 tr{
     border-width:2px;
     border-style: ridge;
     border-color: black;
-    width: 85px;
+   width: auto;
+   position: relative;
+   padding: auto;
+   margin: auto;
 }
 
 th{
@@ -38,19 +46,19 @@ h1{
     
 }
 button{
-    top: 10px;
+    top: 20px;
     position: relative;
-    left: 700px;
+    left: 5px;
     margin: auto;
 }
 div#fno{
     position: relative;
     background-color: rgba(52, 243, 148, 0.801);
-    width: 500px;
+    width: 600px;
     margin: auto;
-    padding-top: 50pt;
-    padding-left: 50pt;
-    padding-bottom: 50pt;
+    padding-top: 15pt;
+    padding-left: 20pt;
+    padding-bottom: 20pt;
 }
 input{
     background-color: rgb(228, 245, 242);
