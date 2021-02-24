@@ -32,19 +32,22 @@ td{
 h1{
     top: 0px;
     background-color: rgb(90, 223, 246);
-    width: 990px;
+    width: auto;
     position: relative ;
+    margin: auto;
     
 }
 button{
-    top: -55px;
+    top: 10px;
     position: relative;
-    left: 730px;
+    left: 700px;
+    margin: auto;
 }
 div#fno{
+    position: relative;
     background-color: rgba(52, 243, 148, 0.801);
-    width: 700px;
-    margin-top: 10px;
+    width: 500px;
+    margin: auto;
     padding-top: 50pt;
     padding-left: 50pt;
     padding-bottom: 50pt;
