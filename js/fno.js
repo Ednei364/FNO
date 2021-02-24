@@ -185,7 +185,9 @@
         fin = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.'))
         Amort = fin /parseFloat(numeroDeParc.value)
         saldo = fin-(Amort*i)
-        taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
+        // taxa1 =((saldo+Amort) * parseFloat(taxa.value)/100)
+        taxa1 =((saldo+Amort) * taxaDoMes1)
+
         parc =Amort+taxa1
         var taxa1valor3=',$1'
         var taxa1valor1 =function valor1(){
