@@ -24,7 +24,8 @@
     var Amort;
     var saldo;
     var parc;
-    var taxa1
+    var taxa1;
+    var taxaDoMes1;
     /////////////////////////////////////////////////////   
 
     newdata.onclick = function(){
@@ -89,7 +90,7 @@
                     sdf.insertBefore($tr, trAtual);
                     
                     diascal()
-                   // taxmescal()
+                    taxmescal()
                     datacal()
                     parcelacal()
                     amortcal()
@@ -113,9 +114,13 @@
     }
 
     function taxmescal(){
-        taxamem = ((1+(taxa.value/100))^(31/valorfinanc.value))-1
+       //debugger;
+       var taxaaq = (parseFloat(taxa.value)/100)
+        taxaDoMes1 = ((1+taxaaq)**(taxamem/360)-1).toFixed(5)
+        
         var taxaDoMes = document.createElement("td");//node
-        var noTaxaDoMes = document.createTextNode(`${taxamem}`);
+        var noTaxaDoMes = document.createTextNode(`${taxaDoMes1}`);
+
         taxaDoMes.appendChild(noTaxaDoMes)
         $tr.appendChild(taxaDoMes)
         
