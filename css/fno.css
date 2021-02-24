@@ -24,19 +24,22 @@ th{
     border-color: black;
     width: 85px;
 }
-/* 
-th#par{
-    width:1px;
-} */
 
 td{
     border: 1px solid rgba(5, 5, 5, 0.705);
 }
 
 h1{
+    top: 0px;
     background-color: rgb(90, 223, 246);
-    width: 700px;
+    width: 990px;
+    position: relative ;
+    
+}
+button{
+    top: -55px;
     position: relative;
+    left: 730px;
 }
 div#fno{
     background-color: rgba(52, 243, 148, 0.801);
@@ -72,6 +75,7 @@ button#contrato{
 
 
 /* formatação dos botões */
+
 .bt {
     border:1px solid #25692A;
     border-radius:4px;
@@ -108,8 +112,5 @@ button#contrato{
     background:linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
     }
     
-    .bt:active {
-    position:relative;
-    top:2px;}
     /* formatação dos botões FIM*/
      
