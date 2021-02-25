@@ -83,13 +83,10 @@ label#erro{
     margin-right: 100px;
 }
 button#contrato{
-    font-style: oblique;
-    font-family: serif;
-    font-size: 14pt;
-    background-color: rgb(0, 52, 100);
-    margin-top: 20px;
-    margin: inherit;
-    margin-left: 230px;
+    top: 25px;
+    left: 465px;
+
+
 }
 
 
