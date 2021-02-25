@@ -1,7 +1,8 @@
 body{
-    background-color: darkcyan;
+    background-color:     #00DEFF;
 }
 table{
+    top: 10px;
     background-color:#3ab8ad93;
     width: auto;
     position: relative;
@@ -10,6 +11,7 @@ table{
     /* border: 2px solid black; */
 }
 thead{
+    
     width: auto;
     position: relative;
     padding: auto;
@@ -17,6 +19,7 @@ thead{
 }
 
 tr{
+    
     border-width:2px;
     border-style: ridge;
     border-color: black;
@@ -38,27 +41,33 @@ td{
 }
 
 h1{
-    top: 0px;
-    background-color: rgb(90, 223, 246);
+    text-align: center;
+    top: 30px;
+    background-color: #00B3FF;
     width: auto;
     position: relative ;
     margin: auto;
     
 }
 button{
-    top: 20px;
+    top: -35px;
     position: relative;
     left: 5px;
     margin: auto;
 }
 div#fno{
+    top: -20px;
     position: relative;
-    background-color: rgba(52, 243, 148, 0.801);
+    background-color:#0084ff;
     width: 600px;
     margin: auto;
-    padding-top: 15pt;
+    padding-top: 10pt;
     padding-left: 20pt;
     padding-bottom: 20pt;
+}
+
+div#cor{
+    background-color: #00BCFF;
 }
 input{
     background-color: rgb(228, 245, 242);
