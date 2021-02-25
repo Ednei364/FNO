@@ -133,7 +133,6 @@
         }
 
         function DataDoPagamento(){
-            //debugger;
             function cal(n){
                 if(n===0)
                     return 12
@@ -146,9 +145,12 @@
                 var a= cal(date.getFullYear())
                 return `${d}-${m}-${a}`
             }
-            
+            if(dyas2===undefined && dyas2 === undefined){
+                dataLocal=''
+            }else{
             var dd = NovaData.setMonth(NovaData.getMonth()+1)
             var dataLocal=formatarDate(NovaData)
+            }
             var trNova5 = document.createElement("td");//node
             var contParcela5 = document.createTextNode(`${dataLocal}`);
             trNova5.appendChild(contParcela5)
