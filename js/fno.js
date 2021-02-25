@@ -92,7 +92,7 @@
                         diasDaUltimaParcela()
                         taxaDoMesProporcional()
                         DataDoPagamento()
-                        parcelacal()
+                        numeroDaParcela()
                         amortcal()
                         taxacal()
                         prestcal()                
@@ -164,9 +164,16 @@
                 dyas2=dd
                 }
         }
-        function parcelacal(){
+        function numeroDaParcela(){
+            var pp;
+            if(taxaDoMes1 === ''){
+                pp=''
+            }else{
+                pp = `${i-1}ª`
+            }
+
             var trNova = document.createElement("td"); //node
-            var contParcela = document.createTextNode(`${i}ª`);
+            var contParcela = document.createTextNode(`${pp}`);
             trNova.appendChild(contParcela);
             $tr.appendChild(trNova)
         }
