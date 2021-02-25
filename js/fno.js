@@ -83,7 +83,7 @@
                 return erro.innerHTML="Informe uma data"
             //if(paras>0)
             // return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
-            for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
+            for(var i=0; i < (parseFloat(numeroDeParc.value)+1);i++ ){
                         erro.innerHTML=""
                         var trAtual = document.getElementById("div");
                         $tr = document.createElement('tr');
