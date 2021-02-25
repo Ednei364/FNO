@@ -135,6 +135,8 @@
         function DataDoPagamento(){
             //debugger;
             function cal(n){
+                if(n===0)
+                    return 12
                 return n<=9?`0${n}`:`${n}`;
             }
             
