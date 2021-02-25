@@ -85,13 +85,13 @@
             // return alert("Existre uma simulação de Fno já lançado, a pagina será recarregada"),window.location.reload()
             for(var i=0; i < parseFloat(numeroDeParc.value);i++ ){
                         erro.innerHTML=""
-                        var trAtual = document.getElementById("div1");
+                        var trAtual = document.getElementById("div");
                         $tr = document.createElement('tr');
                         sdf.insertBefore($tr, trAtual);
                         
                         diasDaUltimaParcela()
                         taxaDoMesProporcional()
-                        datacal()
+                        DataDoPagamento()
                         parcelacal()
                         amortcal()
                         taxacal()
@@ -132,36 +132,39 @@
             
         }
 
-        function parcelacal(){
-            var trNova = document.createElement("td"); //node
-            var contParcela = document.createTextNode(`${i}ª`);
-            trNova.appendChild(contParcela);
-            $tr.appendChild(trNova)
-        }
-
-        function datacal(){
+        function DataDoPagamento(){
+            debugger;
             function cal(n){
                 return n<=9?`0${n}`:`${n}`;
             }
+            
             function formatarDate(date){       
                 var d = cal(date.getDate())
                 var m= cal(date.getMonth())
                 var a= cal(date.getFullYear())
                 return `${d}-${m}-${a}`
             }
+            
             var dd = NovaData.setMonth(NovaData.getMonth()+1)
+            console.log(dd)
             var dataLocal=formatarDate(NovaData)
             var trNova5 = document.createElement("td");//node
             var contParcela5 = document.createTextNode(`${dataLocal}`);
             trNova5.appendChild(contParcela5)
             $tr.appendChild(trNova5)
+                
             if(i%2===0 ){
                 dyas=dd
             }else{
                 dyas2=dd
                 }
         }
-
+        function parcelacal(){
+            var trNova = document.createElement("td"); //node
+            var contParcela = document.createTextNode(`${i}ª`);
+            trNova.appendChild(contParcela);
+            $tr.appendChild(trNova)
+        }
         function amortcal(){
             fin = parseFloat(((valorfinanc.value).replace(/\./gi,'')).replace(/,/,'.'))
             Amort = fin /parseFloat(numeroDeParc.value)
