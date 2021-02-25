@@ -133,7 +133,7 @@
         }
 
         function DataDoPagamento(){
-            debugger;
+            //debugger;
             function cal(n){
                 return n<=9?`0${n}`:`${n}`;
             }
@@ -146,13 +146,12 @@
             }
             
             var dd = NovaData.setMonth(NovaData.getMonth()+1)
-            console.log(dd)
             var dataLocal=formatarDate(NovaData)
             var trNova5 = document.createElement("td");//node
             var contParcela5 = document.createTextNode(`${dataLocal}`);
             trNova5.appendChild(contParcela5)
             $tr.appendChild(trNova5)
-                
+
             if(i%2===0 ){
                 dyas=dd
             }else{
