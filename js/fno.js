@@ -107,7 +107,8 @@
             if(dyas2===undefined && dyas2 === undefined){
                 taxamem=''
                 }else{
-                dyas>dyas2?taxamem=(dyas-dyas2)/1000/60/60/24:taxamem=(dyas2-dyas)/1000/60/60/24
+                    taxamem=Math.abs(dyas-dyas2)/1000/60/60/24)
+                //dyas>dyas2?taxamem=(dyas-dyas2)/1000/60/60/24:taxamem=(dyas2-dyas)/1000/60/60/24
             }
             var taxaDoMes = document.createElement("td");//node
             var noTaxaDoMes = document.createTextNode(`${taxamem}`);
