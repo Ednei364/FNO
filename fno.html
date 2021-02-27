@@ -1,130 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/fno.css">
-    <title>Financimento/simulação</title>
-</head>
-<body>
-        <div id="cor">
-        <div id="botoes">
-            <div> 
-                <h1>
-                    <span>Tabela de calculos</span>
-                </h1>
-            </div> 
-            <button class="bt bt-vd" data-js="incsluir">
-                <a href="../FNO/relatorio.html" >RELATÓRIO</a>
-            </button>
-            <button class="bt bt-vd" data-js="incsluir">
-                <a href="../FNO/core.html" >CORES</a>
-            </button>
-            <button class="bt bt-vd" data-js="incsluir">
-                <a href="../FNO/index.html" >INDEX</a>
-            </button>
-            
-        </div>
-
-         
-        <div>
-            <label data-js="erro" id="erro"></label>
-        </div>
-        
-        <div id="fno">
-            <label for="">
-                <span>Empresa</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Nº do Contrato</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Modelo</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Data do Crédito</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Base</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Carencia</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Bonus</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>IPCA/SAC</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Amotização período</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Juros período</span>
-                <input type="text" value="Não esta configurado :/">
-            </label>
-            <label for="">
-                <span>Valor do contrato</span>
-                <input type="text" id="valor" data-js="valorfinanc"maxlength="15" value="1">
-            </label>
-            <label for="">
-                <span>Quant.de parcelas</span>
-                <input type="text" id="parc" data-js="totalparc" maxlength="3" value="20">
-            </label>
-            <label for="">
-                <span>Taxa do contrato</span>
-                <input type="text" id="taxa" data-js="taxa" maxlength="3"  value="2">
-            </label>
-            <label for="">
-                <span>Data da primeira parcela</span>
-                <input type="date" id="date" data-js="newdata" value="2020-11-18">
-            </label>
-
-
-
-               
-               
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/fno.css">
+        <title>Financimento/simulação</title>
+    </head>
+    <body>
+            <div id="cor">
+            <div id="botoes">
+                <div> 
+                    <h1>
+                        <span>Tabela de calculos</span>
+                    </h1>
+                </div> 
+                <button class="bt bt-vd" data-js="incsluir">
+                    <a href="../FNO/relatorio.html" >RELATÓRIO</a>
+                </button>
+                <button class="bt bt-vd" data-js="incsluir">
+                    <a href="../FNO/core.html" >CORES</a>
+                </button>
+                <button class="bt bt-vd" data-js="incsluir">
+                    <a href="../FNO/index.html" >INDEX</a>
+                </button>
                 
-               
-            
-            <label data-js="asdf" >adfsad</label> 
-            <!-- <button id="contrato" data-js="incsluir">Gerar contrato</button> -->
-            
+            </div>
 
-            <button id="contrato" class="bt bt-vm" data-js="incluir">Gerar contrato</button>
-
-        </div>
-    </div>  
-    <table >
-		<thead data-js="tr" >
-			<tr id="tt" >
-				<th>dias</th>
-				<th>taxa</th>
-                <th>Venc </th>
-				<th>Parc.</th>
-				<th>Amortiz.</th>
-				<th>Juros</th>
-				<th>Prestação</th>
-				<th>Saldo</th>
-			</tr>
             
-		</thead>
-        <!-- <tbody >
-            <tr data-js="tr"> </tr>
-        </tbody> -->
-    </table>
-    
-    <script src="js/fno.js"></script>
-    <script src="js/biblioteca.js"></script>
-    
-</body>
-</html>
+            <div>
+                <label data-js="erro" id="erro"></label>
+            </div>
+            
+            <div id="fno">
+                <label for="">
+                    <span>Empresa</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Nº do Contrato</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Modelo</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Data do Crédito</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Base</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Carencia</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Bonus</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>IPCA/SAC</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Amotização período</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label>
+                <label for="">
+                    <span>Juros período</span>
+                    <input type="text" value="Não esta configurado :/">
+                </label></br></br></br></br></br>
+                <label for="">
+                    <span>Valor do contrato</span>
+                    <input type="text" id="valor" data-js="valorfinanc"maxlength="15" value="1">
+                </label></br>
+                <label for="">
+                    <span>Quant.de parcelas</span>
+                    <input type="text" id="parc" data-js="totalparc" maxlength="3" value="20">
+                </label></br>
+                <label for="">
+                    <span>Taxa do contrato</span>
+                    <input type="text" id="taxa" data-js="taxa" maxlength="3"  value="2">
+                </label></br>
+                <label for="">
+                    <span>Data da primeira parcela</span>
+                    <input type="date" id="date" data-js="newdata" value="2020-11-18">
+                </label>
+                <button id="contrato" class="bt bt-vm" data-js="incluir">Gerar contrato</button>
+            </div>
+            
+        </div>  
+        <table >
+            <thead data-js="tr" >
+                <tr id="tt" >
+                    <th>dias</th>
+                    <th>taxa</th>
+                    <th>Venc </th>
+                    <th>Parc.</th>
+                    <th>Amortiz.</th>
+                    <th>Juros</th>
+                    <th>Prestação</th>
+                    <th>Saldo</th>
+                </tr>
+                
+            </thead>
+            <!-- <tbody >
+                <tr data-js="tr"> </tr>
+            </tbody> -->
+        </table>
+        
+        <script src="js/fno.js"></script>
+        <script src="js/biblioteca.js"></script>
+        
+    </body>
+    </html>

@@ -82,10 +82,9 @@ label#erro{
     margin-right: 100px;
 }
 button#contrato{
-    top: 220px;
-    left: 255px;
+    top: 30px;
     margin: auto;
-    position: absolute;
+    position: relative;
 
 
 }
