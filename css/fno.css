@@ -77,12 +77,14 @@ input{
     margin-top: 5px;
 
 }
+
 label#erro{
     background-color: rgb(233, 92, 92);
     font-style: italic;
     font-size: 20px;
     margin-right: 100px;
 }
+
 button#contrato{
     top: 30px;
     margin: auto;
