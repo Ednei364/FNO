@@ -59,11 +59,11 @@ div#fno{
     top: -20px;
     position: relative;
     background-color:#0084ff;
-    width: 600px;
+    width: 700px;
     margin: auto;
-    padding-top: 10pt;
+    padding-top: 20pt;
     padding-left: 20pt;
-    padding-bottom: 20pt;
+    padding-bottom: 30pt;
 }
 
 div#cor{
@@ -79,12 +79,13 @@ label#erro{
     background-color: rgb(233, 92, 92);
     font-style: italic;
     font-size: 20px;
-    /* margin-left: 100px; */
     margin-right: 100px;
 }
 button#contrato{
-    top: 25px;
-    left: 205px;
+    top: 220px;
+    left: 255px;
+    margin: auto;
+    position: absolute;
 
 
 }
