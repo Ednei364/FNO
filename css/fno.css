@@ -8,7 +8,6 @@ table{
     position: relative;
     padding: auto;
     margin: auto;
-    /* border: 2px solid black; */
 }
 thead{
     
@@ -88,9 +87,6 @@ button#contrato{
 
 
 }
-
-
-
 /* formatação dos botões */
 
 .bt {
