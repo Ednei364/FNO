@@ -274,7 +274,6 @@
             $tr.appendChild(trNova4)
             i++
         }
-
         function criarpsar(){
             taxa.value =`${taxa.value}%`
         }
