@@ -9,7 +9,7 @@
         var sdf = document.querySelector('[data-js="tr"]')
         var newdata = document.querySelector('[data-js="newdata"]');
 
-        ////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////
         //var valor =valorfinanc.value
         var i = 1
         var paras;
