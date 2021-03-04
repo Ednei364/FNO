@@ -25,7 +25,7 @@
         var parc;
         var taxa1;
         var taxaDoMes1;
-        /////////////////////////////////////////////////////   
+        //////////////////////////////////////////////////   
 
         newdata.onclick = function(){
             newdata.value=newdata.value
