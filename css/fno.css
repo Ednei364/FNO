@@ -5,7 +5,7 @@
 body{
     background-color:     #00BCFF;
 }
-table{
+.tabela{
     top: 10px;
     background-color:#3ab8ad93;
     width: auto;
@@ -22,7 +22,7 @@ table{
 } */
 .result{
   
-
+z-index: 1;
 
 
     
@@ -32,10 +32,18 @@ table{
 }
 
 .cor{
+    background-color: #00BCFF;
+    z-index: 2;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+}
+.cabecalho-tabela{
+
+    position: fixed;
+
+
 }
 
 tr{
