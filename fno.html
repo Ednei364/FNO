@@ -7,10 +7,10 @@
         <title>Financimento/simulação</title>
     </head>
     <body>
-            <div id="cor">
-            <div id="botoes">
-                <div> 
-                    <h1>
+        <div class="cor">
+            <div class="botoes">
+                <div > 
+                    <h1 class="titulo">
                         <span>Tabela de calculos</span>
                     </h1>
                 </div> 
@@ -89,27 +89,24 @@
                     <input type="date" id="date" data-js="newdata" value="2020-11-18">
                 </label>
                 <button id="contrato" class="bt bt-vm" data-js="incluir">Gerar contrato</button>
-            </div>
-            
-        </div>  
-        <table >
-            <thead data-js="tr" >
-                <tr id="tt" >
-                    <th>dias</th>
-                    <th>taxa</th>
-                    <th>Venc </th>
-                    <th>Parc.</th>
-                    <th>Amortiz.</th>
-                    <th>Juros</th>
-                    <th>Prestação</th>
-                    <th>Saldo</th>
-                </tr>
-                
-            </thead>
-            <!-- <tbody >
-                <tr data-js="tr"> </tr>
-            </tbody> -->
-        </table>
+            </div><hr>
+        </div>
+        <div class="result">  
+            <table >
+                <thead data-js="tr" >
+                    <tr id="tt" >
+                        <th>dias</th>
+                        <th>taxa</th>
+                        <th>Venc </th>
+                        <th>Parc.</th>
+                        <th>Amortiz.</th>
+                        <th>Juros</th>
+                        <th>Prestação</th>
+                        <th>Saldo</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
         
         <script src="js/fno.js"></script>
         <script src="js/biblioteca.js"></script>
