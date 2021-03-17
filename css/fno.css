@@ -3,7 +3,7 @@
     padding:0 ;
 }
 body{
-    background-color:     #00BCFF;
+    background-color:     #D8D8D8;
 }
 .tabela{
     top: 10px;
@@ -32,7 +32,7 @@ z-index: 1;
 }
 
 .cor{
-    background-color: #00BCFF;
+    background-color: #E1E1E1;
     z-index: 2;
     position: fixed;
     left: 0;
