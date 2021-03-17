@@ -3,7 +3,7 @@
     padding:0 ;
 }
 body{
-    background-color:     #D8D8D8;
+    background-color:     #757575;
 }
 .tabela{
     top: 10px;
@@ -32,7 +32,7 @@ z-index: 1;
 }
 
 .cor{
-    background-color: #E1E1E1;
+    background-color: #757575;
     z-index: 2;
     position: fixed;
     left: 0;
@@ -71,7 +71,7 @@ td{
 h1{
     text-align: center;
     top: 0px;
-    background-color: #00B3FF;
+    background-color: #33cc6e67;
     width: auto;
     position: relative ;
     margin: auto;
@@ -89,7 +89,7 @@ button{
 #fno{
     top: -20px;
     position: relative;
-    background-color:#0084ff;
+    background-color:#1ab8ad99;
     width: 700px;
     margin: auto;
     padding-top: 20pt;
