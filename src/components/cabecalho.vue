@@ -24,6 +24,33 @@ export default {
 </script>
 
 <style>
+
+h1{
+    text-align: center;
+    top: 0px;
+    background-color: #33cc6e67;
+    width: auto;
+    position: relative ;
+    margin: auto;
+    height:50px
+    
+}
+
+button{
+    top: -35px;
+    position: relative;
+    left: 5px;
+    margin: auto;
+}
+
+.cor{
+    background-color: #f2f4f8;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 .bt {
     border:1px solid #25692A;
     border-radius:4px;

@@ -13,7 +13,7 @@ export default{
 </script>
 
 <style>
-#app {
+#sapp {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -23,12 +23,11 @@ export default{
 	font-size: 2.5rem;
 }
 
-button {
-	margin: 10px 0px;
-	padding: 10px 20px;
-	font-size: 1.4rem;
-	border-radius: 5px;
-	color: #FFF;
-	background-color: #2196F3;
+*{
+    margin: 0;
+    padding:0 ;
+}
+body{
+    background-color:     #f2f4f8;
 }
 </style>
