@@ -40,7 +40,7 @@ button{
     top: -35px;
     position: relative;
     left: 5px;
-    margin: auto;
+    margin: 2px;
 }
 
 .cor{
