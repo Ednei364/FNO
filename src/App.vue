@@ -5,6 +5,7 @@
 			<label data-js="erro" id="erro"></label>
 		</div>
 		<formulario/>
+		<resultado/>
 
 
 	</div>
@@ -13,8 +14,9 @@
 <script>
 import cabecalho from './components/cabecalho.vue'
 import formulario from './components/formulario.vue'
+import resultado from './components/resultado.vue'
 export default{
-  components:{cabecalho, formulario}
+  components:{cabecalho, formulario,resultado}
 }
 
 </script>
