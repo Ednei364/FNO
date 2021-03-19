@@ -1,16 +1,13 @@
 <template>
 	<div id="app">
-		<h1>Diretivas (Desafio)</h1>
-		<hr>
-		<!-- Exercício -->
-		<!-- Escreva uma diretiva que funcione com o v-on (escute eventos) -->
-		<button>Executar</button>
+		<cabecalho/>
 	</div>
 </template>
 
 <script>
+import cabecalho from './components/cabecalho.vue'
 export default{
-  
+  components:{cabecalho}
 }
 
 </script>
