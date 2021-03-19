@@ -1,19 +1,19 @@
 <template>
     <div class="botoes">
-                <div > 
-                    <h1 class="titulo">
-                        <span>Tabela de calculos</span>
-                    </h1>
-                </div> 
-                <button class="bt bt-vd" data-js="incsluir">
-                    <a href="../FNO/relatorio.html" >RELATÓRIO</a>
-                </button>
-                <button class="bt bt-vd" data-js="incsluir">
-                    <a href="../FNO/core.html" >CORES</a>
-                </button>
-                <button class="bt bt-vd" data-js="incsluir">
-                    <a href="../FNO/index.html" >INDEX</a>
-                </button>
+        <div > 
+            <h1 class="titulo">
+                <span>Tabela de calculos</span>
+            </h1>
+        </div> 
+        <button class="bt bt-vd">
+            <a href="../FNO/relatorio.html" >RELATÓRIO</a>
+        </button>
+        <button class="bt bt-vd">
+            <a href="../FNO/core.html" >CORES</a>
+        </button>
+        <button class="bt bt-vd">
+            <a href="../FNO/index.html" >INDEX</a>
+        </button>
     </div>
 </template>
 
