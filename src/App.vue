@@ -1,13 +1,20 @@
 <template>
 	<div id="app">
 		<cabecalho/>
+		<div>
+			<label data-js="erro" id="erro"></label>
+		</div>
+		<formulario/>
+
+
 	</div>
 </template>
 
 <script>
 import cabecalho from './components/cabecalho.vue'
+import formulario from './components/formulario.vue'
 export default{
-  components:{cabecalho}
+  components:{cabecalho, formulario}
 }
 
 </script>
@@ -30,4 +37,12 @@ export default{
 body{
     background-color:     #f2f4f8;
 }
+
+label#erro{
+    background-color: rgb(233, 92, 92);
+    font-style: italic;
+    font-size: 20px;
+    margin-right: 100px;
+}
+
 </style>
