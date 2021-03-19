@@ -25,40 +25,33 @@ export default {
 
 <style>
 .result{
-  
-z-index: 1;
-
-
-    
+z-index: 1;   
     position: relative;
     padding: auto;
-    top: 460px;
+    top: auto;
 }
 
-.cor{
-    background-color: #f2f4f8;
-    z-index: 2;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+.tabela{
+    top: 10px;
+    background-color:#3ab8ad93;
+    width: auto;
+    position: relative;
+    padding: auto;
+    margin: auto;
 }
+
 .cabecalho-tabela{
-
     position: fixed;
-
-
 }
 
 tr{
-
     border-width:2px;
     border-style: ridge;
     border-color: black;
-   width: auto;
-   position: relative;
-   padding: auto;
-   margin: auto;
+    width: auto;
+    position: relative;
+    padding: auto;
+    margin: auto;
 }
 
 th{
