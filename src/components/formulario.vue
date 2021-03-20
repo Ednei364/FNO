@@ -43,21 +43,21 @@
             </label>
             <label for="">
                 <span>Valor do contrato</span>
-                <input type="text" id="valor" data-js="valorfinanc" maxlength="15" value="1">
+                <input type="text" id="valor" maxlength="15" value="1">
             </label>
             <label for="">
                 <span>Quant.de parcelas</span>
-                <input type="text" id="parc" data-js="totalparc" maxlength="3" value="202">
+                <input type="text" id="parc" maxlength="3" value="202">
             </label>
             <label for="">
                 <span>Taxa do contrato</span>
-                <input type="text" id="taxa" data-js="taxa" maxlength="3"  value="2">
+                <input type="text" id="taxa" maxlength="3"  value="2">
             </label>
             <label for="">
                 <span>Data da primeira parcela</span>
-                <input type="date" id="date" data-js="newdata" value="2020-11-18">
+                <input type="date" id="date" value="2020-11-18">
             </label>
-            <button id="contrato" class="bt bt-vm" data-js="incluir">Gerar contrato</button>
+            <button id="contrato" class="bt bt-vm">Gerar contrato</button>
         </div>
             <hr>
     </div>
@@ -65,6 +65,28 @@
 
 <script>
 export default {
+    data(){
+        return{
+            i: 1,
+            paras,
+            $tr:document.createElement('tr'),
+            dyas:'',
+            dataPag:newdata.value,
+            NovaData:new Date(dataPag),
+            dyas2:'',   
+            taxamem:'',
+            fin:'',
+            Amort:'',
+            saldo:'',
+            parc:'',
+            taxa1:'',
+            taxaDoMes1:'',
+
+        }
+    },
+    methods:{
+
+    }
 
 }
 </script>
